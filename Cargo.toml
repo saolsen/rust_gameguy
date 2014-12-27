@@ -1,0 +1,25 @@
+[package]
+
+name = "gameguy"
+version = "0.0.1"
+authors = ["Stephen Olsen <steve.olsen@gmail.com>"]
+
+[[bin]]
+
+name = "gameguy"
+path = "src/sdl_platform.rs"
+
+[[bin]]
+
+name = "test_dynamic_load"
+path = "src/test_dynamic_load.rs"
+
+[lib]
+
+name = "dynamic_lib"
+path = "src/test_dynamic_lib.rs"
+crate-type = ["dylib"]
+
+[dependencies.sdl2]
+
+git = "https://github.com/AngryLawyer/rust-sdl2.git"
